@@ -1,3 +1,3 @@
 #!bin/bash
 
-sudo cp mock/ /var/www/html
+cp mock/ /var/www/html
