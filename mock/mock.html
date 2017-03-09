@@ -28,8 +28,13 @@
 			margin-bottom:1.5em;
 		}
 		header{
-			margin-top:50px;
 			background: url("placeholder1.jpg") no-repeat;
+		}
+		#a5{
+			background: url("placeholder4.jpg") no-repeat;
+		}
+		header,#a5{
+			margin-top:50px;
 			background-size:cover;
 			background-position: bottom;
 			height:50vw;
@@ -37,13 +42,8 @@
 			max-height:800px;
 			display:flex;
 		}
-		header .container{
+		header .container, #a5 .container{
 			align-self: center;
-		}
-		#a5{
-			background: url("placeholder4.png") no-repeat;
-			background-size: cover;
-			height:500px;
 		}
 		section, header{
 			padding:3em 0;
@@ -349,7 +349,8 @@
 	<section id="a5">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-7"></div>
+				<div class="col-md-5">
 					<h1>Looks selected just for you.</h1>
 	            	<p>With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</p>
 	            	<a class="btn btn-lg btn-default">Start your free trial</a>
