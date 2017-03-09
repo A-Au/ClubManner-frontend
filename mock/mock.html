@@ -93,13 +93,152 @@
 		<div class="container">
 	            <div class="row">
 	            	<div class="col-md-12 text-center">
-		            	<h1>Looks selected just for you.</h1>
-		            	<p>With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</p>
-		            	<a class="btn btn-lg btn-default">Start your free trial</a>
+		            	<h1 id="h-temp">Looks selected just for you.</h1>
+		            	<p id="p-temp">With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</p>
+		            	<a id="button-temp" class="btn btn-lg btn-default">Start your free trial</a>
 	            	</div>
 	            </div>
 	        </div>
 	</header>
+
+
+
+<!-- REMOVE -->
+		<!-- REMOVE -->
+				<!-- REMOVE -->
+						<!-- REMOVE -->
+								<!-- REMOVE -->
+										<!-- REMOVE -->
+												<!-- REMOVE -->
+	<style>
+		.inputs{
+			width:160px;
+			display:flex;
+			display:inline-block;
+		}
+		.value{
+			display:flex;
+			display:inline-block;
+		}
+		input[type=text]{
+			width:3em;
+			margin:0;
+		}
+	</style>
+	<script>
+	function c(rgb,idself,id){
+		r = document.getElementById("r"+idself).value
+		g = document.getElementById("g"+idself).value
+		b = document.getElementById("b"+idself).value
+
+		document.getElementById("d"+rgb+idself).value = document.getElementById(rgb+idself).value;
+
+		if (idself == "3"){
+			document.getElementById(id).style.background = `rgb(${r},${g},${b})`;
+			document.getElementById(id).style.border = `rgb(${r},${g},${b})`;
+		}
+		else{
+			document.getElementById(id).style.color = `rgb(${r},${g},${b})`;
+		}
+	}
+	</script>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div style="display:inline-block; margin:50px 20px;">
+
+				<p style="text-align:center;">HEADER</p>
+					<div>
+						<label style="color:red;">R</label>
+						<div class="inputs"><input id="r1" type="range" name="r" min="0" max="255" value="0" oninput="c('r','1','h-temp')" /></div>
+						<div class="value"><input id="dr1" type="text" name="dr" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:green;">G</label>
+						<div class="inputs"><input id="g1" type="range" name="g" min="0" max="255" value="0" oninput="c('g','1','h-temp')" /></div>
+						<div class="value"><input id="dg1" type="text" name="dg" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:blue;">B</label>
+						<div class="inputs"><input id="b1" type="range" name="b" min="0" max="255" value="0" oninput="c('b','1','h-temp')" /></div>
+						<div class="value"><input id="db1" type="text" name="db" value="0" readonly /></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div style="display:inline-block; margin:50px 20px;">
+
+				<p style="text-align:center;">DESCRIPTION</p>
+					<div>
+						<label style="color:red;">R</label>
+						<div class="inputs"><input id="r2" type="range" name="r" min="0" max="255" value="0" oninput="c('r','2','p-temp')" /></div>
+						<div class="value"><input id="dr2" type="text" name="dr" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:green;">G</label>
+						<div class="inputs"><input id="g2" type="range" name="g" min="0" max="255" value="0" oninput="c('g','2','p-temp')" /></div>
+						<div class="value"><input id="dg2" type="text" name="dg" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:blue;">B</label>
+						<div class="inputs"><input id="b2" type="range" name="b" min="0" max="255" value="0" oninput="c('b','2','p-temp')" /></div>
+						<div class="value"><input id="db2" type="text" name="db" value="0" readonly /></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div style="display:inline-block; margin:50px 20px;">
+
+				<p style="text-align:center;">BUTTON</p>
+					<div>
+						<label style="color:red;">R</label>
+						<div class="inputs"><input id="r3" type="range" name="r" min="0" max="255" value="0" oninput="c('r','3','button-temp')" /></div>
+						<div class="value"><input id="dr3" type="text" name="dr" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:green;">G</label>
+						<div class="inputs"><input id="g3" type="range" name="g" min="0" max="255" value="0" oninput="c('g','3','button-temp')" /></div>
+						<div class="value"><input id="dg3" type="text" name="dg" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:blue;">B</label>
+						<div class="inputs"><input id="b3" type="range" name="b" min="0" max="255" value="0" oninput="c('b','3','button-temp')" /></div>
+						<div class="value"><input id="db3" type="text" name="db" value="0" readonly /></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div style="display:inline-block; margin:50px 20px;">
+
+				<p style="text-align:center;">BUTTON TEXT</p>
+					<div>
+						<label style="color:red;">R</label>
+						<div class="inputs"><input id="r4" type="range" name="r" min="0" max="255" value="0" oninput="c('r','4','button-temp')" /></div>
+						<div class="value"><input id="dr4" type="text" name="dr" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:green;">G</label>
+						<div class="inputs"><input id="g4" type="range" name="g" min="0" max="255" value="0" oninput="c('g','4','button-temp')" /></div>
+						<div class="value"><input id="dg4" type="text" name="dg" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:blue;">B</label>
+						<div class="inputs"><input id="b4" type="range" name="b" min="0" max="255" value="0" oninput="c('b','4','button-temp')" /></div>
+						<div class="value"><input id="db4" type="text" name="db" value="0" readonly /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+												<!-- REMOVE -->
+										<!-- REMOVE -->
+								<!-- REMOVE -->
+						<!-- REMOVE -->
+				<!-- REMOVE -->
+		<!-- REMOVE -->
+<!-- REMOVE -->
+
+
 
 	<section id="a1">
 		<div class="container">
