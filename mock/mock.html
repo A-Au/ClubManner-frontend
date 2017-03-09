@@ -58,6 +58,10 @@
 		.styles{
 			margin:1em 0;
 		}
+		.textbox{
+			background:rgba(255, 255, 255, 0.5);
+			padding:0 0.2em;
+		}
 		@media (min-width: 768px) {
 			.pipe::after{
 				content:" | ";
@@ -94,8 +98,8 @@
 		<div class="container">
 	            <div class="row">
 	            	<div class="col-md-12 text-center">
-		            	<h1 id="h-temp">Looks selected just for you.</h1>
-		            	<p id="p-temp">With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</p>
+		            	<h1 id="h-temp"><span class="textbox">Looks selected just for you.</span></h1>
+		            	<p id="p-temp"><span class="textbox">With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</span></p>
 		            	<a id="button-temp" class="btn btn-lg btn-default">Start your free trial</a>
 	            	</div>
 	            </div>
@@ -113,7 +117,7 @@
 												<!-- REMOVE -->
 	<style>
 		.inputs{
-			width:160px;
+			width:62px;
 			display:flex;
 			display:inline-block;
 		}
@@ -138,6 +142,13 @@
 			document.getElementById(id).style.background = `rgb(${r},${g},${b})`;
 			document.getElementById(id).style.border = `rgb(${r},${g},${b})`;
 		}
+		else if (idself =="5"){
+			var elements = document.getElementsByClassName(id);
+
+			for (var i=0;i<elements.length;i++){
+				elements[i].style.background = `rgba(${r},${g},${b},0.5)`;
+			}
+		}
 		else{
 			document.getElementById(id).style.color = `rgb(${r},${g},${b})`;
 		}
@@ -145,7 +156,7 @@
 	</script>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<div style="display:inline-block; margin:50px 20px;">
 
 				<p style="text-align:center;">HEADER</p>
@@ -166,7 +177,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<div style="display:inline-block; margin:50px 20px;">
 
 				<p style="text-align:center;">DESCRIPTION</p>
@@ -187,7 +198,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<div style="display:inline-block; margin:50px 20px;">
 
 				<p style="text-align:center;">BUTTON</p>
@@ -208,7 +219,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<div style="display:inline-block; margin:50px 20px;">
 
 				<p style="text-align:center;">BUTTON TEXT</p>
@@ -229,8 +240,30 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-md-2">
+				<div style="display:inline-block; margin:50px 20px;">
+
+				<p style="text-align:center;">TEXT BOX</p>
+					<div>
+						<label style="color:red;">R</label>
+						<div class="inputs"><input id="r5" type="range" name="r" min="0" max="255" value="0" oninput="c('r','5','textbox')" /></div>
+						<div class="value"><input id="dr5" type="text" name="dr" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:green;">G</label>
+						<div class="inputs"><input id="g5" type="range" name="g" min="0" max="255" value="0" oninput="c('g','5','textbox')" /></div>
+						<div class="value"><input id="dg5" type="text" name="dg" value="0" readonly /></div>
+					</div>
+					<div>
+						<label style="color:blue;">B</label>
+						<div class="inputs"><input id="b5" type="range" name="b" min="0" max="255" value="0" oninput="c('b','5','textbox')" /></div>
+						<div class="value"><input id="db5" type="text" name="db" value="0" readonly /></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+
 												<!-- REMOVE -->
 										<!-- REMOVE -->
 								<!-- REMOVE -->
@@ -352,8 +385,8 @@
 			<div class="row">
 				<div class="col-md-7"></div>
 				<div class="col-md-5">
-					<h1>Looks selected just for you.</h1>
-	            	<p>With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</p>
+					<h1><span class="textbox">Looks selected just for you.</span></h1>
+	            	<p><span class="textbox">With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</span></p>
 	            	<a class="btn btn-lg btn-default">Start your free trial</a>
 				</div>
 			</div>
