@@ -7,3 +7,4 @@ mkdir -p /var/www/clubmanner.com/mock/a/js
 mkdir -p /var/www/clubmanner.com/mock/a/fonts
 
 cp -r mock/* /var/www/clubmanner.com/mock
+echo "done"
