@@ -1,0 +1,53 @@
+@media (min-width: 768px) {
+	.nav > li:nth-last-child(3) a::after{
+		content:" | ";
+		padding-left: 2em;
+	}
+}
+body{
+	font-size:18px;
+	color:#4B4B4B;
+}
+h1{
+	font-size:41px;
+	line-height:1.3em;
+}
+section{
+	padding:3em 0;
+}
+section:nth-child(odd){
+	background-color:#EFEFEF;
+}
+.hero{
+	margin-top:50px;
+	background-size:cover;
+	height:50vw;
+	min-height:500px;
+	max-height:800px;
+	display:flex;
+}
+.hero .container{
+	align-self: center;
+}
+.banner{
+	background: url("placeholder1.jpg") no-repeat;
+	background-position: bottom;
+}
+.footer{
+	background: url("placeholder4.jpg") no-repeat;
+	background-position:left;
+}
+.photo-gallery{
+	margin: 3em 0;
+}
+.styles{
+	margin:1em 0;
+}
+.textbox{
+	background:rgba(202, 235, 242, 0.5);
+	padding:0 0.2em;
+}
+.btn{
+	color:#4B4B4B;
+	background:#CAEBF2;
+}

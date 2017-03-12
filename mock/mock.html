@@ -5,77 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex">
 	<link rel="stylesheet" href="a/css/bootstrap.min.css" type="text/css">
-
-	<!--put this into a file later-->
-	<style>
-		/*
-		#a1,#a2,#a3,#a4,#a5{height:200px;}
-		#a1{background:red;}
-		#a2{background:blue;}
-		#a3{background: green;}
-		#a4{background: orange;}
-		#a5{background: purple;}
-		*/
-		p,h1,h2,h3,h4,h5,h6,.btn{
-			color:#4B4B4B;
-		}
-		ul{
-			list-style: none;
-		}
-		h1{
-			font-size:41px;
-			line-height:1.3em;
-		}
-		p{
-			font-size:18px;
-			word-wrap: break-word;
-			margin-bottom:1.5em;
-		}
-		header{
-			background: url("placeholder1.jpg") no-repeat;
-			background-position: bottom;
-		}
-		#a5{
-			background: url("placeholder4.jpg") no-repeat;
-			background-position:left;
-		}
-		header,#a5{
-			margin-top:50px;
-			background-size:cover;
-			height:50vw;
-			min-height:500px;
-			max-height:800px;
-			display:flex;
-		}
-		header .container, #a5 .container{
-			align-self: center;
-		}
-		section, header{
-			padding:3em 0;
-		}
-		section:nth-child(odd){
-			background:#EFEFEF;
-		}
-		.photo-gallery{
-			margin: 3em 0;
-		}
-		.styles{
-			margin:1em 0;
-		}
-		.textbox{
-			background:rgba(202, 235, 242, 0.5);
-			padding:0 0.2em;
-		}
-		.btn-default{
-			background:#CAEBF2;
-		}
-		@media (min-width: 768px) {
-			.pipe::after{
-				content:" | ";
-				padding-left: 2em;
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="custom.css" type="text/css">
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -93,7 +23,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="page-scroll" href="#howitworks">How It Works</a></li>
                     <li><a class="page-scroll" href="#lookbook">LookBook</a></li>
-                    <li><a class="pipe page-scroll" href="#blog">Blog</a></li>
+                    <li><a class="page-scroll" href="#blog">Blog</a></li>
                     <li><a class="page-scroll" href="#login">Log In</a></li>
                     <li><a class="page-scroll" href="#signup">Sign Up</a></li>
                 </ul>
@@ -101,13 +31,13 @@
         </div>
     </nav>
 
-	<header>
+	<header class="hero banner">
 		<div class="container">
 	            <div class="row">
 	            	<div class="col-md-12 text-center">
 		            	<h1 id="h-temp"><span class="textbox">Looks selected just for you.</span></h1>
 		            	<p id="p-temp"><span class="textbox">With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</span></p>
-		            	<a id="button-temp" class="btn btn-lg btn-default">Start your free trial</a>
+		            	<a id="button-temp" class="btn btn-lg">Start your free trial</a>
 	            	</div>
 	            </div>
 	        </div>
@@ -317,7 +247,7 @@
 							<p></p>
 						</div>
 					</div>
-					<a class="btn btn-lg btn-default">Browse more looks</a>
+					<a class="btn btn-lg">Browse more looks</a>
 				</div>
 				<div class="col-md-6 photo-gallery">
 					<div class="row">
@@ -360,7 +290,7 @@
 				<div class="col-md-6">
 					<h2>Personalized styling just for you</h2>
 					<p>At Club M&auml;nner, styling is more than just a box of clothing. It is the product of communication between the stylist and you. As the stylist get to know you more, they are able to make recommendations to fit you specifically, for any occasion. Spend less, buy better.</p>
-					<div class="text-center"><a class="btn btn-lg btn-default">Talk to us</a></div>
+					<div class="text-center"><a class="btn btn-lg">Talk to us</a></div>
 				</div>
 			</div>
 		</div>
@@ -371,7 +301,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h2>Top Styling Requests</h2>
-					<ul class="">
+					<ul class="list-unstyled">
 						<li class="styles"><a>Occasion 1</a></li>
 						<li class="styles"><a>Occasion 2</a></li>
 						<li class="styles"><a>Occasion 3</a></li>
@@ -387,14 +317,14 @@
 		</div>
 	</section>
 
-	<section id="a5">
+	<section class="hero footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7"></div>
 				<div class="col-md-5">
 					<h1><span class="textbox">Looks selected just for you.</span></h1>
 	            	<p><span class="textbox">With so many options, but so little guidance, shopping for clothes can be frustrating. We help you find the style that is precisly right for you.</span></p>
-	            	<a class="btn btn-lg btn-default">Start your free trial</a>
+	            	<a class="btn btn-lg">Start your free trial</a>
 				</div>
 			</div>
 		</div>
