@@ -96,12 +96,12 @@
 		$(document).ready(()=>{
 			for (var i=1;i<=11;i++) ((i)=>{
 				$(`#page${i} .datacollection-prev`).on('click',()=>{
-					$('body').animate({
+					$('html, body').animate({
 						scrollLeft: $(`#page${i-1}`).offset().left}
 					,600);
 				});
 				$(`#page${i} .datacollection-next`).on('click',()=>{
-					$('body').animate({
+					$('html, body').animate({
 						scrollLeft: $(`#page${i+1}`).offset().left}
 					,600);
 				});
