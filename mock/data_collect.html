@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Super Suck</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" href="a/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="custom.css" type="text/css">
+
+    <style>
+    body{
+    	overflow-x:hidden;
+    }
+    #datacollection-content{
+    	margin-top:50px;
+    	width:1100%;
+    }
+    .datacollection-page {
+    	width:9.090909090%;
+    	display:inline-block;
+    	padding-bottom:100%;
+    	margin-bottom:-100%;
+    }
+    .datacollection-page:nth-child(odd){
+    	background:blue;
+    }
+    .datacollection-page:nth-child(even){
+    	background:red;
+    }
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll">ClubM&auml;nner</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="asd" class="page-scroll" href="#howitworks">How It Works</a></li>
+                    <li><a id="zxc" class="page-scroll" href="#lookbook">LookBook</a></li>
+                    <li><a id="qwe" class="page-scroll" href="#blog">Blog</a></li>
+                    <li><a class="page-scroll" href="#xxcc">Log In</a></li>
+                    <li><a class="page-scroll" href="#bbz">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="datacollection-content">
+    	<div id="page1" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page2" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page3" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page4" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page5" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page6" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page7" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page8" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page9" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page10" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div><div id="page11" class="datacollection-page">
+    		<button class="datacollection-prev">BACK</button>
+    		<button class="datacollection-next">NEXT</button>
+    	</div>
+    </div>
+
+	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+	<script src="a/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(()=>{
+			for (var i=1;i<=11;i++) ((i)=>{
+				$(`#page${i} .datacollection-prev`).on('click',()=>{
+					$('body').animate({
+						scrollLeft: $(`#page${i-1}`).offset().left}
+					,600);
+				});
+				$(`#page${i} .datacollection-next`).on('click',()=>{
+					$('body').animate({
+						scrollLeft: $(`#page${i+1}`).offset().left}
+					,600);
+				});
+			})(i);
+		});
+    </script>
+</body>
+</html>
