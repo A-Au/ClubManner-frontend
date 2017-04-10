@@ -18,15 +18,28 @@
     .datacollection-page {
     	width:9.090909090%;
     	display:inline-block;
+		vertical-align: top;
+    	padding-top: 100px;
     	padding-bottom:100%;
     	margin-bottom:-100%;
     }
-    .datacollection-page:nth-child(odd){
-    	background:blue;
-    }
-    .datacollection-page:nth-child(even){
-    	background:red;
-    }
+    input[type=radio], input[type=checkbox] {
+    	display: none; 
+	}
+	input[type=radio] + label, input[type=checkbox] + label {
+		display:inline-block;
+    	text-align: center;
+    	cursor: pointer;
+    	height: 200px;
+    	width: 200px;
+    	margin: 2em;
+    	padding: 1em;
+    	border: solid rgba(0,0,0,0.3) 1px;
+    	box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+	}
+	input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+	    background-color:#d0d0d0;
+	}
     </style>
 </head>
 <body>
@@ -46,49 +59,223 @@
                     <li><a id="asd" class="page-scroll" href="#howitworks">How It Works</a></li>
                     <li><a id="zxc" class="page-scroll" href="#lookbook">LookBook</a></li>
                     <li><a id="qwe" class="page-scroll" href="#blog">Blog</a></li>
-                    <li><a class="page-scroll" href="#xxcc">Log In</a></li>
-                    <li><a class="page-scroll" href="#bbz">Sign Up</a></li>
+                    <li><a>Log In</a></li>
+                    <li><a>Sign Up</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="datacollection-content">
+    <form id="datacollection-content">
     	<div id="page1" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>Let's start simple, how would you describe your current style?</h1>
+		    			<input class="datacollection-choice" type="radio" id="style1" name="style" value="" /><label for="style1"></label>
+		    			<input class="datacollection-choice" type="radio" id="style2" name="style" value="" /><label for="style2"></label>
+		    			<input class="datacollection-choice" type="radio" id="style3" name="style" value="" /><label for="style3"></label>
+		    			<input class="datacollection-choice" type="radio" id="style4" name="style" value="" /><label for="style4"></label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page2" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>Where do you usually shop from?</h1>
+    					<p>I saw Flying Lotus at a grocery store in Los Angeles yesterday. I told him how cool it was to meet him in person, but I didn’t want to be a douche and bother him and ask him for photos or anything.
+He said, “Oh, like you’re doing now?”
+I was taken aback, and all I could say was “Huh?” but he kept cutting me off and going “huh? huh? huh?” and closing his hand shut in front of my face. I walked away and continued with my shopping, and I heard him chuckle as I walked off. When I came to pay for my stuff up front I saw him trying to walk out the doors with like fifteen Milky Ways in his hands without paying.
+The girl at the counter was very nice about it and professional, and was like “Sir, you need to pay for those first.” At first he kept pretending to be tired and not hear her, but eventually turned back around and brought them to the counter.
+When she took one of the bars and started scanning it multiple times, he stopped her and told her to scan them each individually “to prevent any electrical infetterence,” and then turned around and winked at me. I don’t even think that’s a word. After she scanned each bar and put them in a bag and started to say the price, he kept interrupting her by yawning really loudly.</p>
+		    			<input class="datacollection-choice" type="checkbox" id="shop1" name="shop" value="" /><label for="shop1">Banana Republic</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop2" name="shop" value="" /><label for="shop2">Zara</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop3" name="shop" value="" /><label for="shop3">Club Monaco</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop4" name="shop" value="" /><label for="shop4">H & M</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop5" name="shop" value="" /><label for="shop5">Nordstrom</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop6" name="shop" value="" /><label for="shop6">Holt Renfrew</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop7" name="shop" value="" /><label for="shop7">J. Crew</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop8" name="shop" value="" /><label for="shop8">Jack & Jones</label>
+		    			<input class="datacollection-choice" type="checkbox" id="shop9" name="shop" value="" /><label for="shop9">Express</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page3" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>How do you like your top to fit?</h1>
+		    			<input class="datacollection-choice" type="radio" id="fit" name="topfit1" value="fit" /><label for="fit">Fit</label>
+		    			<input class="datacollection-choice" type="radio" id="classic" name="topfit1" value="classic" /><label for="classic">Classic</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+		    			<input class="datacollection-choice" type="radio" id="slim" name="topfit2" value="" /><label for="slim">Slim</label>
+		    			<input class="datacollection-choice" type="radio" id="straight" name="topfit2" value="" /><label for="straight">Straight</label>
+		    			<input class="datacollection-choice" type="radio" id="relaxed" name="topfit2" value="" /><label for="relaxed">Relaxed</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page4" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>What's your shirt size?</h1>
+		    			<input class="datacollection-choice" type="radio" id="shirtsize1" name="shirtsize" value="" /><label for="shirtsize1"></label>
+		    			<input class="datacollection-choice" type="radio" id="shirtsize2" name="shirtsize" value="" /><label for="shirtsize2"></label>
+		    			<input class="datacollection-choice" type="radio" id="shirtsize3" name="shirtsize" value="" /><label for="shirtsize3"></label>
+		    			<input class="datacollection-choice" type="radio" id="shirtsize4" name="shirtsize" value="" /><label for="shirtsize4"></label>
+		    			<input class="datacollection-choice" type="radio" id="shirtsize5" name="shirtsize" value="" /><label for="shirtsize5"></label>
+		    			<input class="datacollection-choice" type="radio" id="shirtsize6" name="shirtsize" value="" /><label for="shirtsize6"></label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page5" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>What's your waist size?</h1>
+		    			<input class="datacollection-choice" type="radio" id="waistsize1" name="waistsize" value="28" /><label for="waistsize1">28</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize2" name="waistsize" value="29" /><label for="waistsize2">29</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize3" name="waistsize" value="30" /><label for="waistsize3">30</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize4" name="waistsize" value="31" /><label for="waistsize4">31</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize5" name="waistsize" value="32" /><label for="waistsize5">32</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize6" name="waistsize" value="33" /><label for="waistsize6">33</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize7" name="waistsize" value="34" /><label for="waistsize7">34</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize8" name="waistsize" value="35" /><label for="waistsize8">35</label>
+		    			<input class="datacollection-choice" type="radio" id="waistsize9" name="waistsize" value="36" /><label for="waistsize9">36</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page6" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>What's your shoe size?</h1>
+		    			<input class="datacollection-choice" type="radio" id="shoesize1" name="shoesize" value="6" /><label for="shoesize1">6</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize2" name="shoesize" value="6.5" /><label for="shoesize2">6.5</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize3" name="shoesize" value="7" /><label for="shoesize3">7</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize4" name="shoesize" value="7.5" /><label for="shoesize4">7.5</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize5" name="shoesize" value="8" /><label for="shoesize5">8</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize6" name="shoesize" value="8.5" /><label for="shoesize6">8.5</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize7" name="shoesize" value="9" /><label for="shoesize7">9</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize8" name="shoesize" value="9.5" /><label for="shoesize8">9.5</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize9" name="shoesize" value="10" /><label for="shoesize9">10</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize10" name="shoesize" value="10.5" /><label for="shoesize10">10.5</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize11" name="shoesize" value="11" /><label for="shoesize11">11</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize12" name="shoesize" value="11.5" /><label for="shoesize12">11.5</label>
+		    			<input class="datacollection-choice" type="radio" id="shoesize13" name="shoesize" value="12" /><label for="shoesize13">12</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page7" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>SPOOKY</h1>
+		    			<input class="datacollection-choice" type="radio" id="1" name="asd" value="" /><label for="1">a</label>
+		    			<input class="datacollection-choice" type="radio" id="2" name="asd" value="" /><label for="2">b</label>
+		    			<input class="datacollection-choice" type="radio" id="3" name="asd" value="" /><label for="3">c</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page8" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>SPOOKY</h1>
+		    			<input class="datacollection-choice" type="radio" id="1" name="asd" value="" /><label for="1">a</label>
+		    			<input class="datacollection-choice" type="radio" id="2" name="asd" value="" /><label for="2">b</label>
+		    			<input class="datacollection-choice" type="radio" id="3" name="asd" value="" /><label for="3">c</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page9" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>SPOOKY</h1>
+		    			<input class="datacollection-choice" type="radio" id="1" name="asd" value="" /><label for="1">a</label>
+		    			<input class="datacollection-choice" type="radio" id="2" name="asd" value="" /><label for="2">b</label>
+		    			<input class="datacollection-choice" type="radio" id="3" name="asd" value="" /><label for="3">c</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+			    		<a class="datacollection-next btn btn-lg">NEXT</a>
+    				</div>
+    			</div>
+    		</div>
     	</div><div id="page10" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
-    	</div><div id="page11" class="datacollection-page">
-    		<button class="datacollection-prev">BACK</button>
-    		<button class="datacollection-next">NEXT</button>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1>SPOOKY</h1>
+		    			<input class="datacollection-choice" type="radio" id="1" name="asd" value="" /><label for="1">a</label>
+		    			<input class="datacollection-choice" type="radio" id="2" name="asd" value="" /><label for="2">b</label>
+		    			<input class="datacollection-choice" type="radio" id="3" name="asd" value="" /><label for="3">c</label>
+	    			</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+			    		<a class="datacollection-prev btn btn-lg">BACK</a>
+    					<button>Submit</button>
+    				</div>
+    			</div>
+    		</div>
     	</div>
-    </div>
+    </form>
 
 	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
 	<script src="a/js/bootstrap.min.js"></script>
