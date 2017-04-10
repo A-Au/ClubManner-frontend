@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8" />
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <title>Angular Scrollspy Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ebebeb;
+    }
+    body, button {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    h1 {
+      padding-top: 50px;
+    }
+    img {
+      max-width: 100%;
+    }
+    nav {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    nav li, nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center
+    }
+    nav li, nav a {
+      display: inline-block;
+    }
+    nav a {
+      padding: 20px;
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      background: #fff;
+    }
+    a.active {
+      background: #00AC7F;
+      color: #fff;
+    }
+    .wrap {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+    section {
+      padding: 50px 0 30px 0;
+    }
+    footer {
+      text-align: center;
+    }
+    button {
+      font-size: 18px;
+      border: 0;
+      padding: 15px 30px;
+      background: #00AC7F;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap" ng-controller="MyCtrl">
+  <nav>
+    <ul>
+      <li><a href="#section-1" du-smooth-scroll du-scrollspy offset="30">Section 1</a></li>
+      <li><a href="#section-2" du-smooth-scroll du-scrollspy offset="30">Section 2</a></li>
+      <li><a href="#section-3" du-smooth-scroll du-scrollspy offset="30">Section 3</a></li>
+    </ul>
+  </nav>
+  <h1>Angular.js Scrollspy Example</h1>
+  <section id="section-1">
+    <h2>Section 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et blandit felis. Vivamus quis feugiat enim. Donec ultrices eget tellus sodales ultricies. Nulla scelerisque ipsum ipsum, ut fermentum turpis tincidunt a. Sed sit amet ornare arcu. Etiam tempus, massa nec pellentesque iaculis, massa enim tristique nunc, sed commodo ex urna vitae risus. Duis hendrerit tempor cursus. Integer hendrerit mi sed dictum tempus. Praesent vitae odio maximus, vestibulum eros eget, ullamcorper nulla. Praesent metus ipsum, tristique nec ex eu, dictum ornare lectus.</p>
+  </section>
+
+  <section id="section-2">
+    <h2>Section 2</h2>
+    <p>Etiam quis mollis odio, eget bibendum quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras et suscipit arcu. In scelerisque augue quis risus ultricies, quis placerat erat varius. Quisque venenatis iaculis sapien, nec egestas ex lobortis in. Fusce pretium orci vitae nunc ornare fermentum. Fusce eros eros, vulputate non leo at, varius pretium leo. Ut ornare nunc quis magna condimentum, et tincidunt nunc egestas. Aliquam erat volutpat. Ut leo odio, finibus ac lacinia eu, mollis id dui. Quisque ligula leo, pretium eget eros efficitur, mollis tristique tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, nunc a consectetur feugiat, ligula velit scelerisque tortor, et fermentum eros ipsum in sem. Morbi nec purus varius, commodo metus id, rhoncus mauris. Sed a nibh vel libero vulputate imperdiet sit amet at sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+  </section>
+
+  <section id="section-3">
+    <h2>Section 3</h2>
+    <p>Suspendisse potenti. Fusce viverra mollis rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nec dignissim urna, et blandit lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis tristique diam in mi tincidunt, in auctor urna placerat. Aenean faucibus arcu quis molestie ultrices. Phasellus vitae porta quam. Nullam ornare, arcu et elementum sagittis, enim odio sagittis ligula, vel pretium mi dui eget purus. Phasellus eget consectetur sem. Curabitur sit amet consectetur quam. Donec nec interdum velit, vitae faucibus sapien. Nunc consequat quis tellus ac tempor.</p>
+  </section>
+
+  <section id="section-4">
+    <h2>Section 4</h2>
+
+    <p>Nunc id diam ornare, finibus nulla ut, iaculis dolor. Nulla bibendum varius urna, quis euismod elit pulvinar sit amet. Nam ac diam lacinia, rutrum dui id, vestibulum magna. Nunc dictum ornare lacus et luctus. Curabitur auctor neque sed augue dictum, sodales accumsan orci scelerisque. Nunc ut tristique mauris. Duis eget pharetra metus. Sed sit amet consequat ante, sed sodales enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eget consectetur mi, ut ultrices purus. Donec pretium laoreet nunc euismod fermentum. Morbi varius at risus et vestibulum. Ut rutrum placerat molestie.</p>
+  </section>
+  <footer>
+    <button ng-click="toTheTop()">Take me back!</button> or <button ng-click="toSection2()">To section 2</button>
+  </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+<script>
+angular.module('myApp', ['duScroll']).
+  controller('MyCtrl', function($scope, $document){
+    $scope.toTheTop = function() {
+      $document.scrollTop(0, 5000);
+    }
+    var section2 = angular.element(document.getElementById('section-2'));
+    $scope.toSection2 = function() {
+      $document.scrollTo(section2, 30, 1000);
+    }
+  }
+);
+</script>
+</body>
+</html>
