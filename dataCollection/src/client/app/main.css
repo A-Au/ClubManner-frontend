@@ -1,0 +1,94 @@
+body{
+	width:100%;
+	height:100%;
+	margin:0;
+	left: 0px;
+	top: 0px;
+	font-family: arial;
+}
+.MainPage{
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	background-color:#f2f2f2;
+}
+
+/*HEADER PARTS*/
+.header{
+	border-radius:0px;
+	height: 50px;
+	width: 100%;
+	position:fixed;
+	border-bottom: solid 1px;
+	border-color: #d8d8d8;
+	background-color: #fffefc;
+	color: #8c8c8c;
+	z-index:999;
+	margin:0px;
+}
+.header .container{
+	width:100%;
+	margin:0;
+}
+
+.DivideList{
+	border-right:solid 1px;
+	padding-right:30px;
+	border-color:#d8d8d8;
+}
+.nav{
+	font-size:16px;
+}
+
+
+.BodyWrapper{
+	width:100%;
+	height:100%;
+	/*background-image: url("./image/placeholder1.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.2;*/
+	z-index:0;
+}
+
+.ContentWrapper{
+	position: absolute;
+	height:85%;
+	width: 80%;
+	margin-top:50px;
+	top:50px;
+	bottom:0;
+	left:0;
+	right:0;
+	display:block;
+	margin:auto;
+}
+
+
+.DCH{
+	z-index:999;
+	font-size:50px;
+	margin-bottom:30px;
+}
+
+.selection{
+	border:solid 1px;
+	height: 40%;
+	background-color: gray;
+}
+.selection:hover{
+	background-color:black;
+}
+.selection:active{
+	background-color:blue;
+}
+
+.NavButton{
+	padding-top:20px;
+}
+
+.push-Right{
+	float:right;
+}
