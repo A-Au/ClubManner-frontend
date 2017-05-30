@@ -7,16 +7,60 @@ import { MenuItem } from 'react-bootstrap'
 
 
 import StyleSelection from './StyleSelection.jsx'
+import TopFitSelection from './TopFitSelection.jsx'
+import FitSelection from './FitSelection.jsx'
+import PersonalInfoForm from './PersonalInfoForm.jsx'
+// import UsualShop from './UsualShop.jsx'
 
 class DataInquiry extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {step : 1};
+		this.state = {
+			userData : {
+				step : 0,
+				style : null,
+				topFit : null,
+				fitPref : null,
+				personalInfo: null
+			}
+		};
 	}
+
+	// inputType: which userData are you updating
+	// inputVale: what value are you putting in that specific data type
+	updateObject(inputType, inputValue){
+		// make shallow copy of the state
+		const { userData } = this.state;
+		userData[inputType] = inputValue;
+		this.setState(userData);
+	}
+
+	incrementState(){
+		const { userData } = this.state;
+		userData['step']++;
+		this.setState(userData);		
+	}
+
+	decrementState(){
+		const { userData } = this.state;
+		userData['step']--;
+		this.setState(userData);
+	}
+
 	render() {
 		let part = null;
-		if(this.state.step == 1){
-			part = <StyleSelection />;
+		if(this.state.userData['step'] == 0){
+			part = <StyleSelection incrementState={this.incrementState.bind(this)} updateObject={this.updateObject.bind(this)}/>;
+		}
+		else if(this.state.userData['step'] == 1){
+			part = <TopFitSelection incrementState = {this.incrementState.bind(this)} decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)}/>
+		}
+		else if(this.state.userData['step'] == 2){
+			part = <FitSelection incrementState = {this.incrementState.bind(this)} decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)}/>	
+		}
+		else if(this.state.userData['step'] == 3){
+			part = <PersonalInfoForm decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)}/>
+			// part = <UsualShop incrementState = {this.incrementState.bind(this)} decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)} />
 		}
 		return (
 			<div>
@@ -60,21 +104,7 @@ class HeaderBar extends React.Component{
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-		
-			// <div className = 'header'>
-			// 	<div className = 'logoCM'>
-			// 		ClubMänner
-			// 	</div>
-			// 	<div className = 'btn-sets'>
-			// 		<ul className='rightItem'>
-			// 			<li className='hdrMenu Desc'>How it works</li>
-			// 			<li className='hdrMenu LookBook'> LookBook</li>
-			// 			<li className='hdrMenu Blog'>Blog</li>
-			// 			<li className='hdrMenu LogIn'>Log in</li>
-			// 			<li className='hdrMenu SignUp'>Sign Up</li>							
-			// 		</ul>
-			// 	</div>
-			// </div>
+
 		);
 	}
 }

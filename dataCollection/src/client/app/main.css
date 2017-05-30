@@ -78,11 +78,11 @@ body{
 	height: 40%;
 	background-color: gray;
 }
+.selected{
+	background-color:yellow;
+}
 .selection:hover{
 	background-color:black;
-}
-.selection:active{
-	background-color:blue;
 }
 
 .NavButton{
@@ -90,5 +90,9 @@ body{
 }
 
 .push-Right{
+	float:right;
+}
+
+.btn-toolbar .push-Right{
 	float:right;
 }
