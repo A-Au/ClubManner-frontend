@@ -63,7 +63,7 @@ class TopFitSelection extends React.Component{
 
 				<div className = 'col-sm-12 NavButton'>
 					<ButtonToolbar>
-						<Button onClick = {this.updateTopFit.bind(this)} className='push-right' bsStyle="primary">Next</Button>
+						<Button onClick = {this.updatePersonalInfo.bind(this)} className='push-right' bsStyle="primary">Next</Button>
 						<Button onClick = {this.goToPrevious.bind(this)} className='push-right'>Back</Button>
 					</ButtonToolbar>
 				</div>

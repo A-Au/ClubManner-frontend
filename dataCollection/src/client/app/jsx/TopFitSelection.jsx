@@ -11,7 +11,7 @@ class TopFitSelection extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			selectedTopFit: -1
+			selectedTopFit: this.props.selectedTopFit
 		};
 	}
 

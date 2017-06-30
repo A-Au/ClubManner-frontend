@@ -11,7 +11,7 @@ class FitSelection extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			selectedFit: -1
+			selectedFit: this.props.selectedFit
 		};
 	}
 

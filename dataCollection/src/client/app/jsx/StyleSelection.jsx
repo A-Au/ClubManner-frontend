@@ -10,7 +10,7 @@ class StyleSelection extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			selectedStyle : -1
+			selectedStyle : this.props.selectedStyle
 		};
 	}
 

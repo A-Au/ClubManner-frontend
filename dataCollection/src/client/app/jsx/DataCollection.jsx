@@ -18,9 +18,9 @@ class DataInquiry extends React.Component{
 		this.state = {
 			userData : {
 				step : 0,
-				style : null,
-				topFit : null,
-				fitPref : null,
+				style : -1,
+				topFit : -1,
+				fitPref : -1,
 				personalInfo: null
 			}
 		};
@@ -50,16 +50,25 @@ class DataInquiry extends React.Component{
 	render() {
 		let part = null;
 		if(this.state.userData['step'] == 0){
-			part = <StyleSelection incrementState={this.incrementState.bind(this)} updateObject={this.updateObject.bind(this)}/>;
+			part = <StyleSelection incrementState={this.incrementState.bind(this)} 
+								   updateObject={this.updateObject.bind(this)} 
+								   selectedStyle={this.state.style} />;
 		}
 		else if(this.state.userData['step'] == 1){
-			part = <TopFitSelection incrementState = {this.incrementState.bind(this)} decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)}/>
+			part = <TopFitSelection incrementState = {this.incrementState.bind(this)} 
+									decrementState = {this.decrementState.bind(this)} 
+									updateObject = {this.updateObject.bind(this)}
+									selectedTopFit = {this.state.topFit} />
 		}
 		else if(this.state.userData['step'] == 2){
-			part = <FitSelection incrementState = {this.incrementState.bind(this)} decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)}/>	
+			part = <FitSelection incrementState = {this.incrementState.bind(this)} 
+								 decrementState = {this.decrementState.bind(this)} 
+								 updateObject = {this.updateObject.bind(this)}
+								 selectedFit = {this.state.fitPref} />	
 		}
 		else if(this.state.userData['step'] == 3){
-			part = <PersonalInfoForm decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)}/>
+			part = <PersonalInfoForm decrementState = {this.decrementState.bind(this)} 
+									 updateObject = {this.updateObject.bind(this)} />
 			// part = <UsualShop incrementState = {this.incrementState.bind(this)} decrementState = {this.decrementState.bind(this)} updateObject = {this.updateObject.bind(this)} />
 		}
 		return (
