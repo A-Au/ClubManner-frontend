@@ -96,3 +96,22 @@ body{
 .btn-toolbar .push-Right{
 	float:right;
 }
+
+.nmRow{
+	margin-top: 100px;
+}
+
+.carousel-caption {
+    top: 100;
+    bottom: auto;
+}
+
+.imgCenter {
+	display: block;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.txtCenter {
+	text-align: center;
+}
