@@ -101,17 +101,29 @@ body{
 	margin-top: 100px;
 }
 
-.carousel-caption {
+.carousel-caption{
     top: 100;
     bottom: auto;
 }
 
-.imgCenter {
+.imgCenter{
 	display: block;
 	margin: auto;
 	margin-top: 50px;
 }
 
-.txtCenter {
+.txtCenter{
 	text-align: center;
+}
+
+.imgBordered{
+	margin: 10px;
+}
+
+.hideCar > .carousel-control{
+	display:none;
+}
+
+.hideCar > .carousel-indicators{
+	display:none;
 }
