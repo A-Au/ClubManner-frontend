@@ -17,12 +17,12 @@ var config = {
 	  		test : /\.jsx?/,
 	  		include : APP_DIR,
 	  		exclude: /node_modules/,
-	  		loader: 'babel-loader',
+	  		loader: ['babel-loader', 'eslint-loader']
 	  	},
 	  	{
 	  		test : /\.css/,
 	  		exclude: /node_modules/,
-	  		loaders: ['style-loader','css-loader'],
+	  		loader: ['style-loader','css-loader'],
 	  		include : APP_DIR,
 	  	},
 	  	{
