@@ -1,0 +1,27 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+    "quotes": [2, "single"],
+    "strict": [2, "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-unused-prop-types": ["warn", {"skipShapeProps": true }],
+    "react/react-in-jsx-scope": 2,
+    "radix": [2, "as-needed"]
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": "airbnb"
+}
